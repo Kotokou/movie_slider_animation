@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tmdb_app/screens/main_screen.dart';
+
+import 'screens/home_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -10,13 +11,10 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'The Mobie DB App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
       ),
-      initialRoute: 'home',
-      routes: {
-        'home': (context) => const MainScreen(),
-      },
+      home: const HomeScreen(),
     );
   }
 }
