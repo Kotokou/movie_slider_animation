@@ -3,6 +3,39 @@ import '../models/movie.dart';
 
 List<Movie> movies = [
   Movie(
+    movieName: "Equalizer 3",
+    stars: 5,
+    genres: ['Action', 'Crime', 'Thriller'],
+    cast: [
+      Actor(name: "Denzel Washington", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "Dakota Fanning", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "David Denman", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "Eugenio Mastrandrea", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "Gaia Scodellaro", imageUrl: "assets/images/user5.jpg"),
+    ],
+    rating: 9.9,
+    director: "Antoine Fuqua",
+    description:
+        "Depuis qu'il a renoncé à sa vie d'assassin au service du gouvernement, Robert McCall peine à enterrer les démons de son passé et trouve un étrange réconfort en défendant les opprimés. Alors qu'il pense avoir trouvé un havre de paix dans le sud de l'Italie, il découvre que ses amis sont sous le contrôle de la mafia locale. Quand les évènements prennent une tournure mortelle, McCall sait exactement ce qu'il doit faire : protéger ses amis en s'attaquant directement à la pègre.",
+    imageUrl: "assets/images/equalizer3.jpg",
+  ),
+  Movie(
+    movieName: 'Fast & Furious X',
+    stars: 4,
+    director: 'Louis Leterrier',
+    imageUrl: 'assets/images/fast_and_furiousX.jpg',
+    rating: 9.0,
+    genres: ['Crime', 'Thriller', 'Action'],
+    cast: [
+      Actor(name: 'Vin Diesel', imageUrl: 'assets/images/user1.jpg'),
+      Actor(name: 'Nathalie Emmanuel', imageUrl: 'assets/images/user2.jpg'),
+      Actor(name: 'Ludacris', imageUrl: 'assets/images/user7.jpg'),
+      Actor(name: 'Sung Kang', imageUrl: 'assets/images/user4.jpg')
+    ],
+    description:
+        'Après bien des missions et contre toute attente, Dom Toretto et sa famille ont su déjouer, devancer, surpasser et distancer tous les adversaires qui ont croisé leur route. Ils sont aujourd’hui face à leur ennemi le plus terrifiant et le plus intime : émergeant des brumes du passé, ce revenant assoiffé de vengeance est bien déterminé à décimer la famille en réduisant à néant tout ce à quoi, et surtout à qui Dom ait jamais tenu.',
+  ),
+  Movie(
     movieName: 'The Hustle',
     stars: 4,
     director: 'Chris Addison',
@@ -65,5 +98,23 @@ List<Movie> movies = [
     ],
     description:
         "Invited to his first kissing party, 12-year-old Max asks his best friends Lucas and Thor for some much-needed help on how to pucker up. When they hit a dead end, Max decides to use his father's drone to spy on the teenage girls next door. When the boys lose the drone, they skip school and hatch a plan to retrieve it before Max's dad can figure out what happened.",
+  ),
+  Movie(
+    movieName: "Expend4bles",
+    stars: 3,
+    genres: ['Action', 'Aventure', 'Thriller'],
+    cast: [
+      Actor(name: "Jason Statham", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "50 Cent", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "Dolph Lundgren", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "Andy García", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "Megan Fox", imageUrl: "assets/images/user5.jpg"),
+      Actor(name: "Sylvester Stallone", imageUrl: "assets/images/user5.jpg"),
+    ],
+    rating: 8.0,
+    director: "Scott Waugh",
+    description:
+        "Armés de toutes les armes dont ils peuvent disposer, les Expendables sont la dernière ligne de défense du monde et l'équipe que l'on appelle lorsque toutes les autres options ne sont plus possibles. Le mercenaire Barney Ross et son équipe affrontent un marchand d'armes et son armée privée.",
+    imageUrl: "assets/images/expend4bles.jpg",
   ),
 ];
