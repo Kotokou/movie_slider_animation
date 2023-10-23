@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import '../data/movies.dart';
 import '../models/movie.dart';
 
 class MovieCard extends StatelessWidget {
@@ -47,20 +46,57 @@ class MovieCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: movies.map((e) {
-            //     return Padding(
-            //       padding: const EdgeInsets.symmetric(horizontal: 5),
-            //       child: Container(
-            //         decoration: BoxDecoration(
-            //           color: Colors.grey[600],
-            //           borderRadius: BorderRadius.circular(15),
-            //         ),
-            //       ),
-            //     );
-            //   }).toList(),
-            // ),
+            const SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: movie.genres.map((genre) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: Container(
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: const Color.fromRGBO(117, 117, 117, 1),
+                      ),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Text(
+                      genre,
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: Colors.grey[600],
+                          fontSize: 12),
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+            const SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  movie.rating.toStringAsFixed(1),
+                  style: const TextStyle(fontFamily: 'Poppins'),
+                ),
+                const SizedBox(width: 10),
+                ...List.generate(
+                  movie.stars,
+                  (index) => const Icon(
+                    Icons.star_rate,
+                    size: 18,
+                    color: Colors.orange,
+                  ),
+                ),
+              ],
+            ),
+            const Text(
+              '...',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Poppins',
+              ),
+            ),
           ],
         ),
       ),
